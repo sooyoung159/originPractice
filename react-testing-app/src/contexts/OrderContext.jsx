@@ -57,9 +57,8 @@ export const OrderContextProvider = (props) => {
         products: new Map(),
         options: new Map(),
       });
-
-      return [{ ...orderCounts, totals }, updateItemCount];
     };
+    return [{ ...orderCounts, totals }, updateItemCount, resetOrderDatas];
   }, [orderCounts, totals]);
 
   return <OrderContext.Provider value={value} {...props} />;

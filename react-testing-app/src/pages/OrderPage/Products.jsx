@@ -12,8 +12,11 @@ const Products = (props) => {
         alt={`${props.name} product`}
       />
       <form style={{ marginTop: "10px" }}>
-        <label style={{ textAlign: "right" }}>{props.name}</label>
+        <label htmlFor={props.name} style={{ textAlign: "right" }}>
+          {props.name}
+        </label>
         <input
+          id={props.name}
           style={{ marginLeft: "7px" }}
           type="number"
           name="quantity"

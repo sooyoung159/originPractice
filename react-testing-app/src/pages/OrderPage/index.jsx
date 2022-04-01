@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
-// import { OrderContext } from "../../contexts/OrderContext";
+import { OrderContext } from "../../contexts/OrderContext";
 import Type from "./Type";
 
 const OrderPage = (props) => {
-  // const [orderDatas] = useContext(OrderContext);
+  const [orderData] = useContext(OrderContext);
 
   return (
     <div>
@@ -16,9 +16,9 @@ const OrderPage = (props) => {
           <Type orderType="options" />
         </div>
         <div>
-          <h2>총 가격:</h2>
+          <h2>총 가격: {orderData.total.total}</h2>
           <br />
-          <button>주문하기</button>
+          <button onClick={() => props.setStep(1)}>주문하기</button>
         </div>
       </div>
     </div>

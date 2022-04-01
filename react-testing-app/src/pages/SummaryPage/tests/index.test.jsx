@@ -1,4 +1,4 @@
-const { render, screen } = require("@testing-library/react");
+const { render, screen } = require("../../../test-utils");
 const { default: SummaryPage } = require("..");
 
 test("checkbox and button", () => {
